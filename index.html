@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Paginada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🛡️ Pokédex Paginada</h1>
+
+    <div id="controles">
+        <input type="text" id="buscaNome" placeholder="🔎 Buscar por nome">
+        <select id="filtroTipo">
+            <option value="">Todos os tipos</option>
+        </select>
+        <select id="ordenar">
+            <option value="id">Ordenar por ID</option>
+            <option value="nome">Ordenar por Nome</option>
+        </select>
+    </div>
+
+    <div id="resultado">
+        <p id="mensagem"></p>
+        <div id="spinner" class="hidden"></div>
+        <ul id="listaPokemon"></ul>
+        <div id="paginacao">
+            <button id="btnAnterior" disabled>⬅️ Anterior</button>
+            <span id="paginaAtual">1</span>
+            <button id="btnProximo">Próximo ➡️</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

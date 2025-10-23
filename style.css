@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffcc00;
+}
+
+#controles {
+    margin-bottom: 20px;
+}
+
+#controles input,
+#controles select,
+#controles button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#resultado {
+    background: #162447;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #0f3460;
+}
+
+#listaPokemon {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-item {
+    margin: 8px;
+    padding: 10px;
+    width: 180px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s, opacity 0.5s;
+    opacity: 0;
+}
+
+.pokemon-item.fade-in {
+    opacity: 1;
+}
+
+.pokemon-item img {
+    width: 96px;
+    height: 96px;
+}
+
+.pokemon-item.legendario {
+    box-shadow: 0 0 15px gold;
+}
+
+.detalhes {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgba(30, 30, 63, 0.9);
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.detalhes.ativo {
+    opacity: 1;
+    max-height: 250px;
+}
+
+#spinner {
+    margin: 15px auto;
+    border: 6px solid #333;
+    border-top: 6px solid #ffcc00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: girar 1s linear infinite;
+}
+
+#paginacao {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#paginacao span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Cores por tipo */
+.fogo {
+    background-color: #ff9c54;
+}
+
+.agua {
+    background-color: #4a90da;
+}
+
+.planta {
+    background-color: #78c850;
+}
+
+.eletrico {
+    background-color: #f8d030;
+    color: #1a1a2e;
+}
+
+.normal {
+    background-color: #a8a878;
+    color: #1a1a2e;
+}
+
+.gelo {
+    background-color: #98d8d8;
+    color: #1a1a2e;
+}
+
+.lutador {
+    background-color: #c03028;
+}
+
+.psiquico {
+    background-color: #f85888;
+}
+
+.veneno {
+    background-color: #a040a0;
+}
+
+.pedra {
+    background-color: #b8a038;
+}
+
+.terra {
+    background-color: #e0c068;
+    color: #1a1a2e;
+}
+
+.voador {
+    background-color: #a890f0;
+    color: #1a1a2e;
+}
+
+.inseto {
+    background-color: #a8b820;
+    color: #1a1a2e;
+}
+
+.fantasma {
+    background-color: #705898;
+}
+
+.fada {
+    background-color: #ee99ac;
+    color: #1a1a2e;
+}
+
+.dragao {
+    background-color: #7038f8;
+}
